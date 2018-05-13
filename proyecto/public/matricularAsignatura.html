@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="icon/logo.jpg">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <title>Adicionar Asignatura</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <header>
+      <div class="card">
+      <img style="height: 150px;" class="card-img-top" src="img/banner-superior.jpg" alt="Card image cap">
+      </div>
+      <nav class="navbar navbar-expand-md navbar-dark color-nav">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <a href="index.html"><button class="btn btn-outline-light my-2 my-sm-0" type="button">Cerrar Sesion</button></a>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      
+       <div class="container marketing espacio-contenedor bod-color">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="card text-center cardHistorial">
+        <div class="card-header">
+          <div align="center">
+          <img id="fotoAdicionarAsignatura" src="" class="rounded imagenHistorial">
+          </div>
+          <div align="center">
+            <table class="table table-responsive-sm">
+              <tbody id="infoAdicionarMatricula">
+                <!--
+                <tr>
+                  <td align="left"><span class="negritasHistorial">Numero de Cuenta:</span> 20131009311</td>
+                  <td align="right"><span class="negritasHistorial">Centro:</span> Ciudad Universitaria</td>
+                </tr>
+                <tr>
+                  <td align="left"><span class="negritasHistorial">Nombre:</span> Zamir Josue Martinez Izaguirre</td>
+                  <td align="right"><span class="negritasHistorial">Año:</span> 2018</td>
+                </tr>
+                <tr>
+                  <td align="left"><span class="negritasHistorial">Carrera:</span> Ingenieria en Sistemas</td>
+                  <td align="right"><span class="negritasHistorial">Periodo:</span> 1</td>
+                </tr>
+                <tr>
+                  <td align="left"><button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modalAdicionarAsignatura">Adicionar Asignatura</button></td>
+                  <td align="right"><span class="negritasHistorial">UV Disponibles:</span> 11</td>
+                </tr>
+                <tr>
+                  <td align="left"></td>
+                  <td align="right"></td>
+                </tr>
+              -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <table class="table table-responsive-sm">
+            <thead>
+               <tr>
+                <th colspan="9">Asignaturas Matriculadas</th>
+              </tr>
+              <tr class="table-info">
+                <th>Codigo</th>
+                <th>UV</th>
+                <th>Asignatura</th>
+                <th>Seccion</th>
+                <th>Hora de Entrada</th>
+                <th>Hora de Salida</th>
+                <th>Dias</th>
+                <th>Edificio</th>
+                <th>Aula</th>
+              </tr>
+            </thead>
+            <tbody id="cargarAsignaturasAdicionadas">
+              <!--
+              <tr>
+                <td>DQ102</td>
+                <td>2</td>
+                <td>Dibujo II</td>
+                <td>0700</td>
+                <td>0700</td>
+                <td>1000</td>
+                <td>MaJu</td>
+                <td>D1</td>
+                <td>313</td>
+              </tr>
+              <tr>
+                <td>IS802</td>
+                <td>4</td>
+                <td>Ingenieria en Software</td>
+                <td>1000</td>
+                <td>1000</td>
+                <td>1100</td>
+                <td>LuMaMiJu</td>
+                <td>B1</td>
+                <td>202</td>
+              </tr>
+              <tr>
+                <td>IS811</td>
+                <td>4</td>
+                <td>Seguirdad Informatica</td>
+                <td>1700</td>
+                <td>1700</td>
+                <td>1800</td>
+                <td>LuMaMiJu</td>
+                <td>B1</td>
+                <td>201</td>
+              </tr>
+              <tr>
+                <td>IS912</td>
+                <td>4</td>
+                <td>Programacion Web</td>
+                <td>1600</td>
+                <td>1600</td>
+                <td>1700</td>
+                <td>LuMaMiJu</td>
+                <td>B2</td>
+                <td>209</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            -->
+            </tbody>
+          </table>
+        </div>
+        <div class="card-body">
+          <table class="table table-responsive-sm">
+            <thead>
+               <tr>
+                <th colspan="9">Asignaturas en Lista de Espera</th>
+              </tr>
+              <tr class="table-info">
+                <th>Codigo</th>
+                <th>UV</th>
+                <th>Asignatura</th>
+                <th>Seccion</th>
+                <th>Hora de Entrada</th>
+                <th>Hora de Salida</th>
+                <th>Dias</th>
+                <th>Edificio</th>
+                <th>Aula</th>
+              </tr>
+            </thead>
+            <tbody id="cargarAsignaturasEnEspera">
+              <!--
+              <tr>
+                 <td>IN101</td>
+                <td>4</td>
+                <td>Ingles I</td>
+                <td>0800</td>
+                <td>0800</td>
+                <td>0900</td>
+                <td>LuMaMiJu</td>
+                <td>D1</td>
+                <td>205</td>
+              </tr>
+              <tr>
+                <td>FS200</td>
+                <td>5</td>
+                <td>Fisica II</td>
+                <td>1100</td>
+                <td>1100</td>
+                <td>1200</td>
+                <td>LuMaMiJuVi</td>
+                <td>E1</td>
+                <td>304</td>
+              </tr>      
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+      <hr>
+
+    
+
+<!-- Modal -->
+<div class="modal fade" id="modalAdicionarAsignatura" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Adicionar Asignatura</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-responsive-sm">
+            <thead>
+              <tr class="table-info">
+                <th></th>
+                <th>Codigo</th>
+                <th>UV</th>
+                <th>Asignatura</th>
+                <th>Seccion</th>
+                <th>Hora de Entrada</th>
+                <th>Hora de Salida</th>
+                <th>Dias</th>
+              </tr>
+            </thead>
+            <tbody id="asignaturasAdicionar">
+              <!--
+              <tr>
+                <td><input type="checkbox" name="chkClasesCancelar"></td>
+                <td id="codigoClaseCancelar">DQ102</td>
+                <td id="UVClaseCancelar">2</td>
+                <td id="asignaturaCancelar">Dibujo II</td>
+                <td id="seccionCancelar">0700</td>
+                <td id="horaEntradaCancelar">0700</td>
+                <td id="horaSalidaCancelar">1000</td>
+                <td id="diasClaseCancelar">MaJu</td>
+                <td id="edificioCancelar">D1</td>
+                <td id="aulaCancelar">313</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>IS802</td>
+                <td>4</td>
+                <td>Ingenieria en Software</td>
+                <td>1000</td>
+                <td>1000</td>
+                <td>1100</td>
+                <td>LuMaMiJu</td>
+                <td>B1</td>
+                <td>202</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>IS811</td>
+                <td>4</td>
+                <td>Seguirdad Informatica</td>
+                <td>1700</td>
+                <td>1700</td>
+                <td>1800</td>
+                <td>LuMaMiJu</td>
+                <td>B1</td>
+                <td>201</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>IS912</td>
+                <td>4</td>
+                <td>Programacion Web</td>
+                <td>1600</td>
+                <td>1600</td>
+                <td>1700</td>
+                <td>LuMaMiJu</td>
+                <td>B2</td>
+                <td>209</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            -->
+            </tbody>
+          </table>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="matricularClase();">Matricular</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="indexMatriculaAsignaturas.html"><< Atras</a></p>
+        <p>&copy; DIPP - UNAH, Direccion de Ingreso Permanencia y Promocion</p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <script type="text/javascript" src="js/controlador.js"></script>
+  </body>
+</html>
